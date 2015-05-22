@@ -86,8 +86,7 @@ class GuardedModelAdminMixin(object):
     # Allow queryset method as fallback for Django versions < 1.6
     # for versions >= 1.6 this is taken care of by Django itself
     # and triggers a warning message automatically.
-    if django.VERSION < (1, 6):
-        queryset = get_queryset
+    queryset = get_queryset
 
     def get_urls(self):
         """
